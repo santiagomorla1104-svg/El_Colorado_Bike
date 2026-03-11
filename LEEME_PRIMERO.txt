@@ -1,0 +1,161 @@
+📋 CHECKLIST DE PERSONALIZACIÓN
+================================
+
+Lee esto PRIMERO. Aquí están los pasos que DEBES hacer antes de publicar tu tienda.
+
+✅ PASO 1: CAMBIAR EL NÚMERO DE WhatsApp (OBLIGATORIO)
+--------------------------------------------------
+📄 Archivo: js/script.js
+🔍 Busca: const whatsappPhone = "51900000000";
+✏️  Cambio: Reemplaza con tu número (incluye código de país)
+
+Ejemplo:
+const whatsappPhone = "51912345678"; // Perú
+const whatsappPhone = "5491123456789"; // Argentina
+const whatsappPhone = "3216123456789"; // Colombia
+
+SIN ESTO, LOS CLIENTES NO PODRÁN CONTACTARTE.
+
+
+✅ PASO 2: PERSONALIZAR NOMBRE DE TIENDA
+------------------------------------------
+📄 Archivo: index.html
+🔍 Busca: "Descarrilados Bike"
+✏️  Cambio: Reemplaza con tu nombre de tienda
+
+Lugares a cambiar:
+- <h1>🚴 Descarrilados Bike</h1>
+- <title>Descarrilados Bike - Tienda de Bicicletas</title>
+- En el footer: <h3>Descarrilados Bike</h3>
+
+
+✅ PASO 3: ACTUALIZAR CONTACTO
+---------------------------------
+📄 Archivo: index.html
+Busca la sección footer y actualiza:
+
+<p>📱 +51 900 000 000</p>        → Tu teléfono
+<p>📧 info@descarriladobike.com</p>  → Tu email
+<a href="https://facebook.com">     → Tus redes sociales
+<a href="https://instagram.com">
+<a href="https://tiktok.com">
+
+
+✅ PASO 4: CAMBIAR LOS COLORES (OPCIONAL)
+-------------------------------------------
+📄 Archivo: css/style.css
+🔍 Busca: :root {
+✏️  Cambio: Los códigos de color
+
+:root {
+    --primary-color: #EF4D48;      ← Tu color principal
+    --secondary-color: #D90700;    ← Tu color secundario
+    --dark-color: #2B161B;         ← Color oscuro
+    --light-gray: #F7F3F5;         ← Color fondo
+}
+
+Herramienta para elegir colores: https://htmlcolorcodes.com
+
+
+✅ PASO 5: EDITAR PRODUCTOS
+-----------------------------
+📄 Archivo: js/script.js
+🔍 Busca: const products = [
+✏️  Cambio: Edita o reemplaza con tus productos
+
+Ejemplo de producto:
+{
+    id: 1,
+    name: "Bicicleta MTB Mountain 29\"",
+    price: 1200,
+    category: "mtb",        // Categoría: mtb, ruta, accesorios
+    description: "Descripción del producto",
+    emoji: "🚵"             // O: 🚴 🛞 🪖 🔧
+}
+
+Categorías:
+- "mtb" = Bicicletas de montaña
+- "ruta" = Bicicletas de carretera
+- "accesorios" = Accesorios y repuestos
+
+
+✅ PASO 6: AGREGAR IMÁGENES (OPCIONAL)
+----------------------------------------
+Si quieres imágenes reales en lugar de emojis:
+
+1. Coloca las imágenes en la carpeta: images/
+   - images/producto1.jpg
+   - images/producto2.jpg
+   - etc
+
+2. En js/script.js, modifica donde dice:
+   <div class="product-image">
+       ${product.emoji}
+   </div>
+
+   Por:
+   <div class="product-image">
+       <img src="images/producto${product.id}.jpg" alt="${product.name}">
+   </div>
+
+
+✅ PASO 7: PROBAR TODO ANTES DE PUBLICAR
+-------------------------------------------
+1. Abre index.html en el navegador
+2. Prueba los filtros de categorías
+3. Agrega productos al carrito
+4. Verifica que se muestre correctamente el total
+5. Haz clic en "Comprar por WhatsApp"
+6. Verifica que aparezca tu número y los productos
+
+
+✅ PASO 8: PUBLICAR TU TIENDA (HOSTING)
+-----------------------------------------
+Opciones GRATUITAS:
+
+Opción A - NETLIFY (Recomendado)
+1. Ve a https://netlify.com
+2. Crea una cuenta
+3. Arrastra la carpeta "bikeshop" al área de upload
+4. ¡Listo! Tu tienda estará en línea en segundos
+
+Opción B - GITHUB PAGES
+1. Ve a https://github.com y crea una cuenta
+2. Crea un repositorio llamado "usuario.github.io"
+3. Sube tus archivos
+4. Tu tienda estará en https://usuario.github.io
+
+Opción C - VERCEL
+1. Ve a https://vercel.com
+2. Conecta tu GitHub
+3. Importa tu proyecto
+4. ¡Listo!
+
+
+📝 CHECKLIST FINAL
+-------------------
+☐ Cambié el número de WhatsApp
+☐ Personalicé el nombre de mi tienda
+☐ Actualicé mi contacto (teléfono, email, redes)
+☐ Editié mis productos
+☐ (Opcional) Cambié los colores
+☐ (Opcional) Agregué imágenes
+☐ Probé la tienda en el navegador
+☐ Probé que WhatsApp funciona correctamente
+☐ Publiqué en un hosting gratuito
+
+
+🎉 ¡FELICIDADES!
+-----------------
+Tu tienda online está lista. Ahora puedes:
+- Compartir el enlace en redes sociales
+- Aceptar compras por WhatsApp
+- Agregar más productos cuando quieras
+- Personalizar títulos y descripciones
+
+¿Preguntas sobre algo? Revisa GUIA.html
+
+
+═══════════════════════════════════════════════════
+Creado con ❤️ para ti. ¡Que disfrutes tus ventas!
+═══════════════════════════════════════════════════

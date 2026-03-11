@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarrilados Bike Shop - Tienda de Bicicletas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/Logo_descarrilado-removebg-preview.png" alt="Descarrilados Bike Shop Logo">
+                    <p class="tagline">Aquí no te metemos la rata, solamente el ratoncito</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="tienda.html" class="nav-link">Tienda</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 Carrito <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+    </section>
+
+    <!-- BUTTON SECTION -->
+    <section class="hero-button">
+        <a href="tienda.html" class="btn btn-hero">¡¡Visita nuestra tienda!!</a>
+    </section>
+
+    <!-- CARRITO MODAL -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeCart">&times;</button>
+            <h2>Tu Carrito</h2>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Tu carrito está vacío</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: S/ <span id="totalPrice">0.00</span></h3>
+            </div>
+            <a href="https://wa.me/51906414352?text=Hola%2C%20me%20gustar%C3%ADa%20comprar%20los%20siguientes%20productos%3A" 
+            class="btn btn-primary btn-full">
+                🟢 Comprar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Descarrilados Bike Shop</h3>
+                    <p>Técnicos altamente capacitados por la Park Tool School</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📱 +51 906 414 352</p>
+                    <p>📧 descarriladosbikeshop@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                        <a href="https://tiktok.com" target="_blank">TikTok</a>
+                        <a href="https://wa.me/51906414352" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Descarrilados Bike Shop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

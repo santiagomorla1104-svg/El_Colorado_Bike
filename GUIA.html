@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Inicio - Descarrilados Bike</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #EF4D48;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #EF4D48;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2B161B;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .step {
+            background-color: #F7F3F5;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #EF4D48;
+            border-radius: 5px;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .code-block {
+            background-color: #2B161B;
+            color: #00FF00;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        a {
+            color: #EF4D48;
+            text-decoration: none;
+            border-bottom: 1px solid #EF4D48;
+        }
+        
+        a:hover {
+            background-color: #F7F3F5;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #EF4D48;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background-color: #D90700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚴 Guía de Inicio Rápido - Descarrilados Bike</h1>
+        
+        <div class="success">
+            <strong>✅ ¡Felicidades!</strong> Tu tienda está lista. Sigue estos pasos para personalizarla.
+        </div>
+
+        <h2>1️⃣ Cambiar el número de WhatsApp</h2>
+        <div class="step">
+            <p>Este es el <strong>paso más importante</strong>.</p>
+            <ul>
+                <li>Abre el archivo <code>js/script.js</code></li>
+                <li>Busca esta línea: <code>const whatsappPhone = "51906414352";</code></li>
+                <li>Reemplaza <code>51906414352</code> con tu número de WhatsApp</li>
+                <li>Incluye el código de país (ejemplo: 51 para Perú)</li>
+            </ul>
+            <div class="code-block">
+// ANTES:
+const whatsappPhone = "51906414352";
+
+// DESPUÉS:
+const whatsappPhone = "51906414352"; // Reemplaza con tu número
+            </div>
+        </div>
+
+        <h2>2️⃣ Personalizar el nombre de tu tienda</h2>
+        <div class="step">
+            <p>En el archivo <code>index.html</code>, busca y reemplaza:</p>
+            <ul>
+                <li><code>&lt;h1&gt;🚴 Descarrilados Bike&lt;/h1&gt;</code></li>
+                <li>Título de la página: <code>&lt;title&gt;</code></li>
+                <li>En el footer, la información de contacto</li>
+            </ul>
+        </div>
+
+        <h2>3️⃣ Cambiar los colores</h2>
+        <div class="step">
+            <p>En el archivo <code>css/style.css</code>, busca `:root {` y modifica:</p>
+            <div class="code-block">
+:root {
+    --primary-color: #EF4D48;      /* Cambiar este rojo */
+    --secondary-color: #D90700;    /* Cambiar este rojo oscuro */
+    --dark-color: #2B161B;         /* Cambiar este marrón */
+    --light-gray: #F7F3F5;         /* Cambiar fondo */
+}
+            </div>
+            <p>Puedes usar <a href="https://htmlcolorcodes.com" target="_blank">esta herramienta</a> para elegir colores.</p>
+        </div>
+
+        <h2>4️⃣ Agregar tus productos</h2>
+        <div class="step">
+            <p>En <code>js/script.js</code>, modifica el array <code>products</code>:</p>
+            <div class="code-block">
+const products = [
+    {
+        id: 1,
+        name: "Tu Producto",
+        price: 500,
+        category: "mtb",          // mtb, ruta, accesorios
+        description: "Descripción",
+        emoji: "🚴"               // O: 🚵 🛞 🪖 🔧
+    }
+];
+            </div>
+            <p><strong>Categorías disponibles:</strong> mtb, ruta, accesorios</p>
+        </div>
+
+        <h2>5️⃣ Agregar imágenes de productos (opcional)</h2>
+        <div class="step">
+            <ol>
+                <li>Coloca tus imágenes en la carpeta <code>images/</code></li>
+                <li>En <code>js/script.js</code>, modifica donde dice:
+                    <div class="code-block">
+&lt;div class="product-image"&gt;
+    ${product.emoji}
+&lt;/div&gt;
+                    </div>
+                </li>
+                <li>Cámbialo por:
+                    <div class="code-block">
+&lt;div class="product-image"&gt;
+    &lt;img src="images/producto${product.id}.jpg" alt="${product.name}"&gt;
+&lt;/div&gt;
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>6️⃣ Información de contacto</h2>
+        <div class="step">
+            <p>En <code>index.html</code>, busca el footer y actualiza:</p>
+            <ul>
+                <li>Número de teléfono</li>
+                <li>Email</li>
+                <li>Enlaces de redes sociales</li>
+                <li>Dirección (opcional)</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Importante:</strong>
+            <ul>
+                <li>Siempre guarda los cambios después de editar</li>
+                <li>Recarga la página en el navegador (Ctrl + F5)</li>
+                <li>Prueba el carrito y WhatsApp antes de publicar</li>
+            </ul>
+        </div>
+
+        <h2>7️⃣ Probar tu tienda</h2>
+        <div class="step">
+            <ol>
+                <li>Abre <code>index.html</code> en tu navegador</li>
+                <li>Haz clic en "Comprar Ahora"</li>
+                <li>Agrega productos al carrito</li>
+                <li>Haz clic en "Comprar por WhatsApp"</li>
+                <li>Verifica que tu número y productos aparezcan</li>
+            </ol>
+        </div>
+
+        <h2>🚀 ¿Cómo publicar tu tienda?</h2>
+        <div class="step">
+            <p>Tienes varias opciones:</p>
+            <ul>
+                <li><strong>Netlify (Gratis):</strong> <a href="https://netlify.com" target="_blank">netlify.com</a> - Arrastra tu carpeta</li>
+                <li><strong>GitHub Pages (Gratis):</strong> <a href="https://pages.github.com" target="_blank">pages.github.com</a></li>
+                <li><strong>Vercel (Gratis):</strong> <a href="https://vercel.com" target="_blank">vercel.com</a></li>
+                <li><strong>Hosting propio:</strong> Contrata un hosting y sube los archivos vía FTP</li>
+            </ul>
+        </div>
+
+        <h2>📞 Soporte</h2>
+        <div class="step">
+            <p>Si necesitas ayuda:</p>
+            <ul>
+                <li>Verifica que todos los números estén correctos</li>
+                <li>Asegúrate de guardar los archivos</li>
+                <li>Recarga la página (Ctrl + F5 o Cmd + Shift + R)</li>
+                <li>Abre la consola del navegador (F12) para ver errores</li>
+            </ul>
+        </div>
+
+        <h2>✨ Próximos pasos</h2>
+        <div class="success">
+            <ul>
+                <li>✅ Personaliza tu tienda</li>
+                <li>✅ Agrega tus productos</li>
+                <li>✅ Prueba todas las funciones</li>
+                <li>✅ Comparte tu enlace</li>
+                <li>✅ ¡Comienza a vender!</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="btn">← Volver a la Tienda</a>
+    </div>
+</body>
+</html>

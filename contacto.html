@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Descarrilados Bike Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/Logo_descarrilado-removebg-preview.png" alt="Descarrilados Bike Shop Logo">
+                    <p class="tagline">Aquí no te metemos la rata, solamente el ratoncito</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="tienda.html" class="nav-link">Tienda</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 Carrito <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACTO SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title">Contacto</h1>
+            
+            <div class="contact-wrapper">
+                <!-- INFORMACIÓN DE CONTACTO -->
+                <aside class="contact-info">
+                    <div class="info-box">
+                        <h3>📍 Ubicación</h3>
+                        <p>Av. Manco Cápac 179<br>Galería Santa Ana, Stand 13<br>Lima, Perú</p>
+                        <a href="https://maps.app.goo.gl/DzNU2x8fq6qdDxEZA" target="_blank" class="btn btn-secondary">Ver en Google Maps</a>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>🕐 Horarios de Atención</h3>
+                        <p>
+                            <strong>Lunes a Domingo</strong><br>
+                            9:00 AM - 8:00 PM
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📞 Contacto Directo</h3>
+                        <p>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/51906414352" target="_blank" class="contact-link">+51 906 414 352</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:descarriladosbikeshop@gmail.com" class="contact-link">descarriladosbikeshop@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div class="info-box social-box">
+                        <h3>🌐 Síguenos</h3>
+                        <div class="social-links-contact">
+                            <a href="https://facebook.com/profile.php?id=100092724133002" target="_blank" class="social-icon">Facebook</a>
+                            <a href="https://instagram.com/descarriladosbikeshop" target="_blank" class="social-icon">Instagram</a>
+                            <a href="https://tiktok.com/@descarrilados.bikeshop" target="_blank" class="social-icon">TikTok</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- FORMULARIO DE CONTACTO -->
+                <main class="contact-form-container">
+                    <div class="contact-form-box">
+                        <h2>Envíanos un Mensaje</h2>
+                        <p class="form-subtitle">Completa el formulario y nos pondremos en contacto contigo a través de WhatsApp</p>
+                        
+                        <form id="contactForm" onsubmit="sendContactMessage(event)">
+                            <div class="form-group">
+                                <label for="name">Nombre *</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Teléfono *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Ej: 987654321">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="¿En qué podemos ayudarte?">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" required placeholder="Cuéntanos tu consulta..." rows="5"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                📱 Enviar por WhatsApp
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- PREGUNTAS FRECUENTES -->
+                    <div class="faq-box">
+                        <h2>Preguntas Frecuentes</h2>
+                        
+                        <div class="faq-item">
+                            <h4>¿Realizan envíos a toda la ciudad?</h4>
+                            <p>Sí, realizamos envíos a todo Lima. Contáctanos por WhatsApp para conocer los costos según tu ubicación.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>¿Tienen garantía en los productos?</h4>
+                            <p>La mayoría de nuestros productos cuentan con garantía del fabricante. Consulta con nosotros sobre productos específicos.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>¿Realizan trabajos de reparación?</h4>
+                            <p>Sí, realizamos servicios de reparación y mantenimiento. Contáctanos para agendar una cita.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>¿Qué métodos de pago aceptan?</h4>
+                            <p>Aceptamos múltiples métodos de pago: efectivo, transferencia bancaria, tarjeta de crédito/débito, y billeteras digitales (Yape, Plin, etc.).</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRITO MODAL -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeCart">&times;</button>
+            <h2>Tu Carrito</h2>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Tu carrito está vacío</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: S/ <span id="totalPrice">0.00</span></h3>
+            </div>
+            <a href="https://wa.me/51906414352?text=Hola%2C%20me%20gustar%C3%ADa%20comprar%20los%20siguientes%20productos%3A" 
+            class="btn btn-primary btn-full">
+                🟢 Comprar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Descarrilados Bike Shop</h3>
+                    <p>Técnicos altamente capacitados por la Park Tool School</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📱 +51 906 414 352</p>
+                    <p>📧 descarriladosbikeshop@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/profile.php?id=100092724133002" target="_blank">Facebook</a>
+                        <a href="https://instagram.com/descarriladosbikeshop" target="_blank">Instagram</a>
+                        <a href="https://tiktok.com/@descarrilados.bikeshop" target="_blank">TikTok</a>
+                        <a href="https://wa.me/51906414352" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Descarrilados Bike Shop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

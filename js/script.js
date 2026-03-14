@@ -104,6 +104,14 @@ const products = [
         description: 'Cámara para rueda de 29 pulgadas',
         image: 'images/products/cámara-maxxis.svg'
     },
+    {
+        id: 14,
+        name: 'Pedales de aluminio Lunje',
+        price: 90,
+        category: 'componentes',
+        description: 'Pedales de aluminio, de plataforma, para bicicleta',
+        image: 'images/products/pedales-lunje.svg'
+    },
 ];
 
 let cart = [];

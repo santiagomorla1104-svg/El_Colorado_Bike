@@ -542,15 +542,19 @@ if (previewAddCart) {
 
 /* cerrar tocando fuera */
 
-preview.addEventListener("click", (e) => {
+if (preview) {
 
-    if (e.target === preview) {
+    preview.addEventListener("click", (e) => {
 
-        preview.classList.remove("active");
+        if (e.target === preview) {
 
-    }
+            preview.classList.remove("active");
 
-});
+        }
+
+    });
+
+}
 
 function sortByPrice() {
 

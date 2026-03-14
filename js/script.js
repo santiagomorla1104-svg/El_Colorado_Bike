@@ -60,7 +60,7 @@ const products = [
         id: 8,
         name: 'Potencia Tornasolada Lunje',
         price: 80,
-        category: 'MTB',
+        category: 'componentes',
         description: 'Potencia tornasolada de aluminio para MTB',
         image: 'images/products/potenciatornasol.svg'
     },
@@ -68,12 +68,36 @@ const products = [
         id: 9,
         name: 'Manubrio Lunje 780mm',
         price: 55,
-        category: 'MTB',
+        category: 'componentes',
         description: 'Manubrio de aluminio de 780mm para MTB, ergonómico y resistente',
         image: 'images/products/lunje-manubrio.svg'
     },
     {
         id: 10,
+        name: 'Manubrio Lunje 780mm con diseño',
+        price: 80,
+        category: 'componentes',
+        description: 'Manubrio de aluminio de 780mm para MTB, ergonómico y resistente',
+        image: 'images/products/lunje-diseño.svg'
+    },
+    {
+        id: 11,
+        name: 'Bottom bracket sellado RIRO',
+        price: 50,
+        category: 'componentes',
+        description: 'Bottom bracket sellado para bicicleta con sistema de eje de 24mm, compatible con cuadros de MTB y ruta',
+        image: 'images/products/bottom-riro.svg'
+    },
+    {
+        id: 12,
+        name: 'Cadena Sram PC-830 8 velocidades',
+        price: 80,
+        category: 'componentes',
+        description: 'Cadena de 8 velocidades para bicicleta',
+        image: 'images/products/sram-8v.svg'
+    },
+    {
+        id: 13,
         name: 'Manubrio Lunje 780mm con diseño',
         price: 80,
         category: 'MTB',

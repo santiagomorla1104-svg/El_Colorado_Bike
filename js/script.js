@@ -5,7 +5,7 @@ const products = [
         name: 'Bicicleta Jafi Challenger 29',
         price: 2000,
         category: 'mtb',
-        description: 'Bicicleta de montana 1x12 con frenos hidráulicos',
+        description: 'Bicicleta de montana 1x12 con frenos hidráulicos, suspensión de aire y ruedas de 29 pulgadas',
         image: 'images/products/jafi-29.svg'
     },
     {
@@ -428,6 +428,45 @@ function debounce(fn, waitMs) {
     return function debounced(...args) {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => fn.apply(this, args), waitMs);
+    };
+}
+
+const preview = document.getElementById("productPreview");
+const previewImg = document.getElementById("previewImg");
+const previewName = document.getElementById("previewName");
+const previewPrice = document.getElementById("previewPrice");
+const previewDescription = document.getElementById("previewDescription");
+const closePreview = document.getElementById("closePreview");
+
+if (productsGrid) {
+    productsGrid.addEventListener("click", (event) => {
+
+        const card = event.target.closest(".product-card");
+
+        if (!card) return;
+
+        // evitar abrir preview si se hace click en botones
+        if (event.target.closest(".btn-add-cart") || event.target.closest(".btn-whatsapp")) {
+            return;
+        }
+
+        const img = card.querySelector("img").src;
+        const name = card.querySelector(".product-name").innerText;
+        const price = card.querySelector(".product-price").innerText;
+        const desc = card.querySelector(".product-description").innerText;
+
+        previewImg.src = img;
+        previewName.innerText = name;
+        previewPrice.innerText = price;
+        previewDescription.innerText = desc;
+
+        preview.classList.add("active");
+    });
+}
+
+if (closePreview) {
+    closePreview.onclick = () => {
+        preview.classList.remove("active");
     };
 }
 

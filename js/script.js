@@ -35,7 +35,7 @@ const products = [
     {
         id: 5,
         name: 'Suspensión Tanke 120mm',
-        price: 450,
+        price: 350,
         category: 'componentes',
         description: 'Suspensión delantera de 120mm para MTB, ajustable y ligera',
         image: 'images/products/suspension-tanke.svg'

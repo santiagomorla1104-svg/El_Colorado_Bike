@@ -27,7 +27,7 @@ const products = [
     {
         id: 4,
         name: 'Asiento antiprostático Rockbros',
-        price: 35,
+        price: 40,
         category: 'componentes',
         description: 'Asiento antiprostático para bicicleta',
         image: 'images/products/asiento-rockbros.svg'

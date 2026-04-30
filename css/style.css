@@ -8,8 +8,9 @@
     --primary-color: #096CC8;
     --secondary-color: #0B83F4;
     --dark-color: #2B161B;
+    --button-dark-color: #4E353E;
     --gray-color: #453E3E;
-    --light-gray: #F7F3F5;
+    --light-gray: #9E9C95;
     --white: #FFFFFF;
     --transition: all 0.3s ease;
 }
@@ -44,6 +45,28 @@ body {
     }
 }
 
+@keyframes heroBadgeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heroButtonIn {
+    from {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -52,13 +75,13 @@ body {
 
 /* HEADER */
 .header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 20px 0;
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+    padding: 8px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .header-content {
@@ -80,8 +103,8 @@ body {
 }
 
 .tagline {
-    font-size: 20px;
-    margin-top: 2px;
+    font-size: 16px;
+    margin-top: 0;
     opacity: 0.9;
 }
 
@@ -103,8 +126,8 @@ body {
 }
 
 .cart-btn {
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: var(--button-dark-color);
+    color: var(--white);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -115,7 +138,7 @@ body {
 }
 
 .cart-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .cart-count {
@@ -136,9 +159,13 @@ body {
     background: url('../images/Fondo descarrilado.jpg') center/100% 100% no-repeat;
     color: var(--white);
     padding: 0;
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .hero-button {
@@ -153,6 +180,177 @@ body {
     font-style: normal;
     font-weight: normal;
     margin-bottom: 15px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.18));
+    pointer-events: none;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 120px 0 70px 0; /* ajustado: baja contenido del hero */
+}
+
+.hero-copy {
+    max-width: 720px;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.05;
+    font-family: 'Racing Sans One', display;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    opacity: 0.95;
+    margin-bottom: 22px;
+    max-width: 62ch;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 500px;
+}
+
+.hero-actions .btn {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: heroButtonIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform, opacity;
+}
+
+.hero-actions .btn:nth-child(1) { animation-delay: 0.12s; }
+.hero-actions .btn:nth-child(2) { animation-delay: 0.20s; }
+
+.btn-hero-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: none;
+}
+
+.btn-hero-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+.hero-badges {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-top: 240px;
+    font-weight: 500;
+}
+
+.hero-badges li {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+    transform: translateY(6px);
+    opacity: 0;
+    animation: heroBadgeIn 0.55s ease forwards;
+}
+
+.hero-badges li:nth-child(1) { animation-delay: 0.08s; }
+.hero-badges li:nth-child(2) { animation-delay: 0.16s; }
+.hero-badges li:nth-child(3) { animation-delay: 0.24s; }
+
+.hero-badges li:hover {
+    transform: translateY(-2px) scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+.hero-badge-link {
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-badge-link:hover {
+    text-decoration: underline;
+}
+
+/* HOME SECTIONS */
+.home-section {
+    padding: 60px 20px;
+}
+
+.home-section-alt {
+    background: linear-gradient(180deg, var(--light-gray), var(--white));
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(20, 27, 46, 0.08);
+    border: 1px solid rgba(9, 108, 200, 0.08);
+}
+
+.info-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.info-card p {
+    color: var(--gray-color);
+}
+
+.home-cta {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.home-cta .btn {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: heroButtonIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.12s;
+    will-change: transform, opacity;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.location-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(20, 27, 46, 0.08);
+    border: 1px solid rgba(9, 108, 200, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.location-card-accent {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.14), rgba(9, 108, 200, 0.08));
+    border-color: rgba(37, 211, 102, 0.25);
 }
 
 
@@ -189,9 +387,9 @@ body {
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     border-radius: 12px !important;
-    background: linear-gradient(135deg, #25D366, #20ba5a) !important;
+    background: var(--button-dark-color) !important;
     color: var(--white) !important;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22) !important;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     position: relative;
     overflow: hidden;
@@ -207,13 +405,13 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.18);
     transition: left 0.5s ease;
 }
 
 .btn-full:hover {
     transform: translateY(-3px) !important;
-    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25) !important;
 }
 
 .btn-full:hover::before {
@@ -221,7 +419,7 @@ body {
 }
 
 .btn-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-color: var(--button-dark-color);
     color: var(--white);
     padding: 20px 60px;
     font-size: 18px;
@@ -231,7 +429,7 @@ body {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(9, 108, 200, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
@@ -251,8 +449,9 @@ body {
 }
 
 .btn-hero:hover {
+    background-color: #6A4A52;
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(9, 108, 200, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .btn-hero:hover:before {
@@ -261,12 +460,7 @@ body {
 
 .btn-hero:active {
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(9, 108, 200, 0.4);
-}
-
-.btn-hero:hover {
-    background-color: var(--light-gray);
-    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* SHOP SECTION */
@@ -835,6 +1029,14 @@ body {
     color: var(--primary-color);
 }
 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 20px;
@@ -908,6 +1110,10 @@ body {
     font-weight: 600;
     text-align: center;
     transition: var(--transition);
+}
+
+.social-icon:hover {
+    background-color: #1558a2;
 }
 
 .social-icon:hover {
@@ -1049,6 +1255,22 @@ body {
     background-size: contain;
     background-position: center top;
     }
+
+    .hero-inner {
+        padding: 46px 0;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
     
     .nav {
         width: 100%;
@@ -1110,6 +1332,10 @@ body {
 
     .hero-content h2 {
         font-size: 24px;
+    }
+
+    .hero-title {
+        font-size: 30px;
     }
 
     .shop-wrapper {

@@ -22,7 +22,7 @@ function sendContactMessage(event) {
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // Redirigir a WhatsApp
-    const whatsappUrl = `https://wa.me/51906414352?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/51922039946?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
     
     // Limpiar el formulario

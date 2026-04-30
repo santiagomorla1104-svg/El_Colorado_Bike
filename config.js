@@ -1,51 +1,51 @@
-// ======================================
-// ARCHIVO DE CONFIGURACIÓN
+﻿// ======================================
+// ARCHIVO DE CONFIGURACIÃ“N
 // Edita este archivo para personalizar
 // tu tienda SIN modificar otros archivos
 // ======================================
 
 const CONFIG = {
-    // 🏪 Datos de la Tienda
+    // ðŸª Datos de la Tienda
     store: {
         name: "Descarrilados Bike Shop",
-        tagline: "Aquí no te metemos la rata, solamente el ratoncito",
-        description: "Los mejores componentes y accesorios para tu bicicleta, con la calidad que mereces y el precio que buscas. ¡Descarrila tus límites con nosotros!",
+        tagline: "AquÃ­ no te metemos la rata, solamente el ratoncito",
+        description: "Los mejores componentes y accesorios para tu bicicleta, con la calidad que mereces y el precio que buscas. Â¡Descarrila tus lÃ­mites con nosotros!",
     },
 
-    // 📞 Contacto
+    // ðŸ“ž Contacto
     contact: {
-        whatsapp: "51906414352",  // ⚠️ IMPORTANTE: Cambia esto a tu número
+        whatsapp: "51906414352",  // âš ï¸ IMPORTANTE: Cambia esto a tu nÃºmero
         email: "descarriladosbikeshop@gmail.com",
         phone: "+51 906414352",
-        address: "Av. Manco Cápac 179, Galería Santa Ana, Stand 13, Lima, Perú"
+        address: "Av. Manco CÃ¡pac 179, GalerÃ­a Santa Ana, Stand 13, Lima, PerÃº"
     },
 
-    // 🌐 Redes Sociales
+    // ðŸŒ Redes Sociales
     social: {
         facebook: "https://facebook.com/profile.php?id=100092724133002",
         instagram: "https://instagram.com/descarriladosbikeshop",
         tiktok: "https://tiktok.com/@descarrilados.bikeshop"
     },
 
-    // 🎨 Colores
+    // ðŸŽ¨ Colores
     colors: {
         primary: "#096CC8",        // Azul descarrilado - Color principal
         secondary: "#0B83F4",      // Azul claro - Color secundario
-        dark: "#2B161B",           // Marrón oscuro
+        dark: "#2B161B",           // MarrÃ³n oscuro
         gray: "#453E3E",           // Gris
         lightGray: "#F7F3F5",      // Gris claro
         white: "#FFFFFF",          // Blanco
         success: "#25D366"         // Verde WhatsApp
     },
 
-    // 💱 Moneda
+    // ðŸ’± Moneda
     currency: {
         symbol: "S/",
         name: "Soles",
         decimals: 2
     },
 
-    // 📱 Configuración de página
+    // ðŸ“± ConfiguraciÃ³n de pÃ¡gina
     page: {
         title: "Descarrilados Bike Shop",
         lang: "es"
@@ -53,7 +53,8 @@ const CONFIG = {
 };
 
 // ======================================
-// NO EDITES NADA DEBAJO DE ESTA LÍNEA
+// NO EDITES NADA DEBAJO DE ESTA LÃNEA
 // ======================================
 
 export default CONFIG;
+

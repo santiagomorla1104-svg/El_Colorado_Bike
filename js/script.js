@@ -52,7 +52,7 @@ const products = [
         id: 7,
         name: 'Extractor de eje sellado',
         price: 40,
-        category: 'Herramientas',
+        category: 'herramientas',
         description: 'Extractor de eje sellado para bicicletas de montaña',
         image: 'images/products/extractorsellado.svg'
     },
@@ -118,7 +118,7 @@ let cart = [];
 let currentFilter = 'todos';
 let currentQuery = '';
 let currentSort = 'default';
-const whatsappPhone = '51906414352';
+const whatsappPhone = '51922039946';
 
 // Elementos del DOM
 const productsGrid = document.getElementById('productsGrid');
@@ -133,8 +133,39 @@ const searchInput = document.getElementById('searchInput');
 function init() {
     loadCartFromStorage();
     setupEventListeners();
+    applyUrlFilters();
     renderProducts();
     updateCartUI();
+}
+
+function applyUrlFilters() {
+    if (!productsGrid) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const q = params.get('q');
+    const sort = params.get('sort');
+
+    if (category) {
+        currentFilter = category;
+        const radio = document.querySelector(`input[name="category"][value="${CSS.escape(category)}"]`);
+        if (radio) {
+            radio.checked = true;
+        }
+    }
+
+    if (typeof q === 'string' && searchInput) {
+        currentQuery = q.toLowerCase().trim();
+        searchInput.value = q;
+    }
+
+    if (sort) {
+        currentSort = sort;
+        const sortSelect = document.getElementById('priceSort');
+        if (sortSelect) {
+            sortSelect.value = sort;
+        }
+    }
 }
 
 function setupEventListeners() {

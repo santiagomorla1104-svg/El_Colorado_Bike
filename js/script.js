@@ -397,7 +397,7 @@ function updateCartUI() {
 
 function updateWhatsappLink(total) {
 
-    const whatsappLink = document.querySelector('.btn-primary');
+    const whatsappLink = document.querySelector('#cartModal .btn-primary');
     if (!whatsappLink) return;
 
     if (cart.length === 0) {
